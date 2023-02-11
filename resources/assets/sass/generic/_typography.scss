@@ -1,0 +1,69 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400;
+  font-family: $primaryfont;
+}
+
+h1 {
+  @include fontSize(50);
+  @include lineHeight(62);
+
+  @include media-breakpoint-down(sm) {
+    @include fontSize(21);
+    @include lineHeight(32);
+  }
+}
+
+h2 {
+  @include fontSize(40);
+  @include lineHeight(62);
+
+  @include media-breakpoint-down(sm) {
+    @include fontSize(24);
+    @include lineHeight(32);
+  }
+}
+
+h3 {
+  @include fontSize(32);
+  @include lineHeight(43);
+
+  @include media-breakpoint-down(sm) {
+    @include fontSize(20);
+    @include lineHeight(32);
+  }
+}
+
+h4 {
+  @include fontSize(20);
+  @include lineHeight(26);
+
+  @include media-breakpoint-down(sm) {
+    @include fontSize(18);
+    @include lineHeight(20);
+  }
+}
+
+h5 {
+  @include fontSize(18);
+  @include lineHeight(48);
+
+  @include media-breakpoint-down(sm) {
+    @include fontSize(16);
+  }
+}
+
+p {
+  font-family: $secondaryfont;
+
+  @include fontSize(20);
+  @include lineHeight(26);
+
+  @include media-breakpoint-down(sm) {
+    @include fontSize(14);
+    @include lineHeight(16);
+  }
+}
