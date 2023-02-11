@@ -8,7 +8,7 @@
 <h2><?php the_sub_field('contact_subheading'); ?></h2>
 <div>
   <span><?php the_sub_field('contact_phone'); ?></span>
-  <a href="mailto:<?php echo antispambot(get_sub_field('phone_number')); ?>"><?php the_sub_field('phone_number'); ?></a>
+  <a href="tel:<?= filter_var(get_field(get_sub_field('phone_number')), FILTER_SANITIZE_NUMBER_INT); ?>"><?php the_sub_field('phone_number'); ?></a>
   <span><?php the_sub_field('contact_form'); ?></span>
   <?php
   $link = get_sub_field('contact_link');

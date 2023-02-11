@@ -20,6 +20,8 @@ while (have_posts()) : the_post();
       get_template_part('resources/templates/pages/homepage/numbers-section');
     elseif (get_row_layout() == 'contact_section') :
       get_template_part('resources/templates/pages/homepage/contact-section');
+    elseif (get_row_layout() == 'how-to-get_section') :
+      get_template_part('resources/templates/pages/homepage/how-to-get-section');
     endif;
   endwhile;
     ?>
