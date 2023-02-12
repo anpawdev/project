@@ -76,6 +76,14 @@ a {
   font-weight: 300;
 }
 
+.fw-700 {
+  font-weight: 700;
+
+  p {
+    @extend .fw-700;
+  }
+}
+
 .w-100 {
   width: 100%;
 }
@@ -114,4 +122,8 @@ a {
 
 .z-index-2 {
   z-index: 2;
+}
+
+.text-underline {
+  text-decoration: underline;
 }

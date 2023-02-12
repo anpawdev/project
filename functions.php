@@ -8,18 +8,9 @@
  * across separate files in the `/src` directory.
  */
 // general
-require_once 'src/comments-off.php';
 require_once 'src/styles.php';
 require_once 'src/scripts.php';
-require_once 'src/navs.php';
-require_once 'src/supports.php';
-require_once 'src/post-types.php';
-require_once 'src/thumbnails.php';
-require_once 'src/taxonomy.php';
-
-// additional
 require_once 'src/acf.php';
-require_once 'src/utilities.php';
 
 // disable default dashboard widgets and unnecessary code
 require_once 'src/clean.php';

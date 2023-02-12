@@ -1,3 +1,36 @@
 .footer {
-  background: #000;
+  background: $black;
+
+  @include fontSize(20);
+  @include lineHeight(24);
+
+  &__block {
+    margin-top: 62px;
+
+    span {
+      margin-bottom: 12px;
+
+      @include fontSize(16);
+      @include lineHeight(18);
+    }
+  }
+
+  &__form {
+    margin-top: 40px;
+  }
+
+  a {
+    margin-bottom: 23px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__copyright {
+    h5 {
+      font-weight: 700;
+      color: rgba($white, 0.5);
+    }
+  }
 }
