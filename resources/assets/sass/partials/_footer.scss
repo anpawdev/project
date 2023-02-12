@@ -4,19 +4,35 @@
   @include fontSize(20);
   @include lineHeight(24);
 
+  @include media-breakpoint-down(sm) {
+    padding-top: 36px;
+  }
+
   &__block {
-    margin-top: 62px;
+    margin-top: 60px;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 32px;
+    }
 
     span {
       margin-bottom: 12px;
 
       @include fontSize(16);
       @include lineHeight(18);
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 3px;
+      }
     }
   }
 
   &__form {
     margin-top: 40px;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 15px;
+    }
   }
 
   a {
@@ -31,6 +47,22 @@
     h5 {
       font-weight: 700;
       color: rgba($white, 0.5);
+    }
+  }
+
+  p {
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 1.5rem;
+
+      @include fontSize(20);
+      @include lineHeight(24);
+    }
+  }
+
+  h5 {
+    @include media-breakpoint-down(sm) {
+      @include fontSize(14);
+      @include lineHeight(16);
     }
   }
 }

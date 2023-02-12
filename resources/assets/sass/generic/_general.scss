@@ -127,3 +127,20 @@ a {
 .text-underline {
   text-decoration: underline;
 }
+
+.scroll-up {
+  right: 30px;
+  bottom: 10px;
+  cursor: pointer;
+  background-color: $black;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border: none;
+  position: fixed;
+  z-index: 9999;
+
+  @include media-breakpoint-down(sm) {
+    right: 30px;
+  }
+}

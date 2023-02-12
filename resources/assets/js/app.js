@@ -8,3 +8,9 @@ window.addEventListener('scroll', function () {
     header.classList.remove('header--sticky')
   }
 })
+
+const scrollToTop = document.getElementById('scrollUp')
+
+scrollToTop.addEventListener('click', function () {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+})
