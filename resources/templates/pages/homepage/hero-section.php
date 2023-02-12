@@ -5,7 +5,7 @@
  *
  */
 ?>
-<section class="section section--hero hero bg-grey">
+<section class="section--hero hero bg-grey">
   <div class="container">
     <div class="row">
       <div class="hero__wrapper col-xxl-5 col-lg-6 col-12 pl-xxl-0 pr-xxl-3 pr-md-3 mb-3 mb-lg-0">

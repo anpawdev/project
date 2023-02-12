@@ -17,6 +17,14 @@
 @font-face {
   font-display: swap;
   font-family: "Museo Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/MuseoSans-700.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Museo Sans";
   font-weight: 900;
   font-style: normal;
   src: url("../fonts/MuseoSans-900.ttf") format("truetype");

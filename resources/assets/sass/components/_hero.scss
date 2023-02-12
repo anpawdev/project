@@ -14,7 +14,7 @@
     }
 
     @include media-breakpoint-only(lg) {
-      padding: 53px 0 77px;
+      padding: 53px 0 77px 15px;
     }
 
     @include media-breakpoint-down(sm) {
@@ -52,6 +52,7 @@
 
     @include media-breakpoint-only(lg) {
       left: 15px;
+      bottom: 0;
       position: absolute;
     }
 

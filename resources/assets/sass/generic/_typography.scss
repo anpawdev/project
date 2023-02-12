@@ -1,9 +1,9 @@
 h1,
-h2 {
+h2,
+h3 {
   font-weight: 900;
 }
 
-h3,
 h4,
 h5,
 p {
@@ -47,16 +47,15 @@ h2 {
     @include fontSize(16);
     @include lineHeight(18);
   }
+
+  strong {
+    color: $green;
+  }
 }
 
 h3 {
-  @include fontSize(32);
-  @include lineHeight(43);
-
-  @include media-breakpoint-down(sm) {
-    @include fontSize(20);
-    @include lineHeight(32);
-  }
+  @include fontSize(20);
+  @include lineHeight(22);
 }
 
 h4 {
@@ -85,5 +84,16 @@ p {
   @include media-breakpoint-down(lg) {
     @include fontSize(16);
     @include lineHeight(24);
+  }
+}
+
+.p-small {
+  font-weight: 300;
+
+  @include fontSize(16);
+  @include lineHeight(24);
+
+  p {
+    @extend .p-small;
   }
 }
