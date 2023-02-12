@@ -1,3 +1,63 @@
 .hero {
   background-color: $grey;
+  padding-top: 17px;
+
+  &__logo {
+    @include media-breakpoint-down(sm) {
+      max-width: 102px;
+    }
+  }
+
+  &__wrapper {
+    @include media-breakpoint-up(xl) {
+      padding: 53px 0;
+    }
+
+    @include media-breakpoint-only(lg) {
+      padding: 53px 0 77px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 33px;
+    }
+  }
+
+  &__headline {
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
+    padding: 41px 0 34px;
+
+    @include media-breakpoint-down(lg) {
+      padding: 33px 0 19px;
+      margin: 45px 0 30px !important;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin: 38px 0 30px !important;
+    }
+
+    p {
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  &__image {
+    left: 93px;
+
+    @include media-breakpoint-down(xl) {
+      left: 0;
+    }
+
+    @include media-breakpoint-only(lg) {
+      left: 15px;
+      position: absolute;
+    }
+
+    @include media-breakpoint-down(md) {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }

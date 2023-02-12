@@ -10,7 +10,7 @@ html {
 }
 
 a {
-  color: $black;
+  color: $white;
   text-decoration: none;
 
   &:focus {
@@ -18,7 +18,7 @@ a {
   }
 
   &:hover {
-    color: inherit;
+    color: $white;
     text-decoration: none;
   }
 }
@@ -52,8 +52,17 @@ a {
 
 .container {
   max-width: 1400px;
+
+  @include media-breakpoint-down(xl) {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
 }
 
 .bg-grey {
   background-color: $grey;
+}
+
+.fw-300 {
+  font-weight: 300;
 }

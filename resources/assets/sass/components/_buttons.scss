@@ -1,1 +1,40 @@
-//
+.btn {
+  background-color: $green;
+  border-radius: 40px;
+  color: $white;
+  height: 80px;
+  display: inline-block;
+  font-weight: 300;
+  margin-top: 11px;
+
+  @include fontSize(20);
+  @include lineHeight(80);
+
+  @include media-breakpoint-down(lg) {
+    height: 67px;
+
+    @include fontSize(16);
+    @include lineHeight(69);
+  }
+
+  &--small {
+    padding: 0 36px;
+
+    @include media-breakpoint-down(lg) {
+      padding: 0 33px;
+    }
+  }
+
+  &--large {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-width: 318px;
+    padding: 0 37px 0 32px;
+
+    @include media-breakpoint-down(lg) {
+      min-width: 248px;
+    }
+  }
+}

@@ -1,29 +1,51 @@
 h1,
-h2,
+h2 {
+  font-weight: 900;
+}
+
 h3,
 h4,
-h5 {
-  font-weight: 400;
+h5,
+p {
+  font-weight: 300;
   font-family: $primaryfont;
 }
 
 h1 {
-  @include fontSize(50);
-  @include lineHeight(62);
+  color: $green;
+  text-transform: uppercase;
+  margin-bottom: 0;
+
+  @include fontSize(38);
+  @include lineHeight(43);
+
+  @include media-breakpoint-down(lg) {
+    @include fontSize(32);
+    @include lineHeight(36);
+  }
 
   @include media-breakpoint-down(sm) {
-    @include fontSize(21);
-    @include lineHeight(32);
+    @include fontSize(24);
+    @include lineHeight(27);
+  }
+
+  strong {
+    color: $black;
   }
 }
 
 h2 {
-  @include fontSize(40);
-  @include lineHeight(62);
+  @include fontSize(24);
+  @include lineHeight(27);
+
+  @include media-breakpoint-down(lg) {
+    @include fontSize(20);
+    @include lineHeight(22);
+  }
 
   @include media-breakpoint-down(sm) {
-    @include fontSize(24);
-    @include lineHeight(32);
+    @include fontSize(16);
+    @include lineHeight(18);
   }
 }
 
@@ -57,13 +79,11 @@ h5 {
 }
 
 p {
-  font-family: $secondaryfont;
-
   @include fontSize(20);
-  @include lineHeight(26);
+  @include lineHeight(28);
 
-  @include media-breakpoint-down(sm) {
-    @include fontSize(14);
-    @include lineHeight(16);
+  @include media-breakpoint-down(lg) {
+    @include fontSize(16);
+    @include lineHeight(24);
   }
 }
