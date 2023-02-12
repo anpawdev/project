@@ -1,1 +1,22 @@
-//
+.section--contact {
+  h1 {
+    @include media-breakpoint-down(lg) {
+      @include fontSize(28);
+      @include lineHeight(32);
+    }
+
+    @include media-breakpoint-down(sm) {
+      @include fontSize(24);
+      @include lineHeight(27);
+    }
+  }
+
+  .image {
+    @include media-breakpoint-down(sm) {
+      position: absolute;
+      max-width: 79% !important;
+      right: -110px;
+      bottom: -9.562rem;
+    }
+  }
+}

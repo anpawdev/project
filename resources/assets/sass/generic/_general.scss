@@ -50,6 +50,10 @@ a {
   right: 0;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1400px;
 
@@ -76,6 +80,22 @@ a {
   width: 100%;
 }
 
+.w-60 {
+  @include media-breakpoint-up(xl) {
+    max-width: 60%;
+  }
+
+  @include media-breakpoint-only(lg) {
+    max-width: 75%;
+  }
+}
+
+.w-80 {
+  @include media-breakpoint-up(xl) {
+    max-width: 81%;
+  }
+}
+
 .section {
   margin-top: 82px;
 
@@ -86,4 +106,12 @@ a {
   @include media-breakpoint-down(sm) {
     margin-top: 30px;
   }
+}
+
+.border-radius-20 {
+  border-radius: 20px;
+}
+
+.z-index-2 {
+  z-index: 2;
 }

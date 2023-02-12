@@ -1,0 +1,69 @@
+.section--numbers {
+  @include media-breakpoint-down(md) {
+    margin-top: 0;
+  }
+
+  .numbers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    @include media-breakpoint-down(sm) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0.7rem;
+    }
+
+    &__wrapper {
+      border: 1px solid $border;
+      border-radius: 20px;
+      padding: 63px 40px 52px;
+
+      @include media-breakpoint-down(lg) {
+        padding: 38px 40px 44px;
+      }
+
+      @include media-breakpoint-down(md) {
+        padding: 30px 4px 35px;
+      }
+
+      h2,
+      span {
+        font-weight: 900;
+      }
+
+      h2 {
+        text-transform: uppercase;
+
+        @include fontSize(28);
+        @include lineHeight(32);
+
+        @include media-breakpoint-down(lg) {
+          @include fontSize(18);
+          @include lineHeight(21);
+        }
+
+        @include media-breakpoint-down(md) {
+          @include fontSize(14);
+          @include lineHeight(16);
+        }
+      }
+
+      span {
+        color: $primarycolor;
+
+        @include fontSize(95);
+        @include lineHeight(107);
+
+        @include media-breakpoint-down(lg) {
+          @include fontSize(64);
+          @include lineHeight(72);
+        }
+
+        @include media-breakpoint-down(md) {
+          @include fontSize(50);
+          @include lineHeight(56);
+        }
+      }
+    }
+  }
+}
