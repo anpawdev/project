@@ -1,0 +1,142 @@
+.contact-form {
+  &__wrapper {
+    box-shadow: 0 22px 42px rgba($black, 0.2);
+    padding: 43px 40px;
+  }
+
+  &__form {
+    margin-bottom: 68px;
+  }
+}
+
+input:not([type="checkbox"]),
+textarea {
+  appearance: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border-radius: 10px;
+  border: 1px solid $border;
+  width: 100%;
+  font-family: $primaryfont;
+  background-color: transparent;
+  padding: 10px 25px;
+
+  @include fontSize(18);
+  @include lineHeight(22);
+}
+
+input {
+  height: 74px;
+
+  @include media-breakpoint-down(sm) {
+    height: 60px;
+  }
+}
+
+input[type="submit"] {
+  color: $white;
+  background-color: $primarycolor;
+  border-radius: 40px;
+  border: none;
+  height: 80px;
+  min-width: 318px;
+  font-weight: 300;
+  font-family: $primaryfont;
+  text-align: left;
+  padding: 0 33px;
+
+  @include fontSize(20);
+  @include lineHeight(23);
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+label {
+  color: $text;
+  text-transform: uppercase;
+  width: 100%;
+  position: relative;
+  margin-bottom: 1.437rem;
+
+  span {
+    color: $red;
+  }
+
+  p {
+    margin-bottom: 0;
+    background-color: $white;
+    position: absolute;
+    top: -14px;
+    left: 14px;
+    z-index: 2;
+    padding: 0 12px;
+
+    @include fontSize(14);
+  }
+}
+
+//checkbox
+.wpcf7-acceptance {
+  label {
+    display: block;
+    margin-bottom: 15px;
+    margin-left: 23px;
+    margin-top: 10px;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: -30px;
+    }
+
+    input {
+      display: none;
+    }
+
+    & .wpcf7-list-item-label {
+      position: relative;
+      cursor: pointer;
+      display: block;
+    }
+
+    & .wpcf7-list-item-label::before {
+      content: "";
+      appearance: none;
+      border: 1px solid $border;
+      background-color: $white;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      cursor: pointer;
+      margin-right: 5px;
+      margin-left: -23px;
+      top: 0;
+    }
+
+    & input:checked + .wpcf7-list-item-label::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 2px;
+      left: -20px;
+      width: 10px;
+      height: 10px;
+      border: solid $white;
+      background-color: $white;
+      border-radius: 2px;
+    }
+
+    & input:checked + .wpcf7-list-item-label::before {
+      background-color: $red;
+      border: 1px solid $white;
+    }
+  }
+
+  a {
+    color: $blue;
+    text-decoration: underline;
+  }
+}

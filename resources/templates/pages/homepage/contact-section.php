@@ -31,10 +31,10 @@
     </div>
   </div>
 </section>
-<section>
+<section class="section--contact-form contact-form mt-8rem">
   <div class="container">
     <div class="row">
-      <div class="col-12 px-0">
+      <div class="col-12 contact-form__wrapper border-radius-20">
         <?php echo do_shortcode('[contact-form-7 id="81" title="Formularz kontaktowy"]'); ?>
       </div>
     </div>
