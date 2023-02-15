@@ -21,7 +21,7 @@ while (have_posts()) : the_post();
     elseif (get_row_layout() == 'contact_section') :
       get_template_part('resources/templates/pages/homepage/contact-section');
     elseif (get_row_layout() == 'how-to-get_section') :
-      get_template_part('resources/templates/pages/homepage/how-to-get-section');
+      get_template_part('resources/templates/pages/homepage/block-steps-section');
     endif;
   endwhile;
     ?>

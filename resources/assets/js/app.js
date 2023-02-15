@@ -1,5 +1,5 @@
 const header = document.querySelector('.header')
-const sticky = 600
+const sticky = 750
 
 window.addEventListener('scroll', function () {
   if (window.pageYOffset > sticky) {

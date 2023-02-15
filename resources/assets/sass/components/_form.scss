@@ -1,11 +1,52 @@
 .contact-form {
   &__wrapper {
     box-shadow: 0 22px 42px rgba($black, 0.2);
-    padding: 43px 40px;
+    padding: 43px 40px 3px;
+
+    @include media-breakpoint-down(sm) {
+      padding: 15px 37px 3px 38px;
+    }
   }
 
   &__form {
     margin-bottom: 68px;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 34px;
+    }
+  }
+
+  &__submit {
+    position: relative;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 12px;
+    }
+
+    &::after {
+      content: url("../images/icons/chevron-right.svg");
+      position: absolute;
+      right: 36px;
+      top: 28px;
+    }
+  }
+
+  h5 {
+    position: relative;
+    margin-left: 40px;
+
+    &::before {
+      content: url("../images/icons/key.svg");
+      position: absolute;
+      width: 30px;
+      left: -41px;
+    }
+  }
+
+  .p-small {
+    @include media-breakpoint-down(sm) {
+      order: -1;
+    }
   }
 }
 
@@ -30,6 +71,15 @@ input {
 
   @include media-breakpoint-down(sm) {
     height: 60px;
+    margin-bottom: 14px;
+  }
+}
+
+textarea {
+  max-height: 197px;
+
+  @include media-breakpoint-down(sm) {
+    min-height: 255px;
   }
 }
 
@@ -39,7 +89,7 @@ input[type="submit"] {
   border-radius: 40px;
   border: none;
   height: 80px;
-  min-width: 318px;
+  min-width: 246px;
   font-weight: 300;
   font-family: $primaryfont;
   text-align: left;
@@ -61,6 +111,10 @@ label {
   position: relative;
   margin-bottom: 1.437rem;
 
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 0.25rem;
+  }
+
   span {
     color: $red;
   }
@@ -76,18 +130,35 @@ label {
 
     @include fontSize(14);
   }
+
+  .wpcf7-list-item-label {
+    color: $black;
+    font-weight: 300;
+    text-transform: none;
+
+    @include fontSize(14);
+  }
 }
 
 //checkbox
 .wpcf7-acceptance {
+  & .wpcf7-list-item {
+    margin: 0 !important;
+
+    @include media-breakpoint-only(lg) {
+      max-width: 340px;
+    }
+  }
+
   label {
     display: block;
     margin-bottom: 15px;
-    margin-left: 23px;
-    margin-top: 10px;
+    margin-left: 36px;
+    margin-top: 12px;
 
     @include media-breakpoint-down(sm) {
       margin-bottom: -30px;
+      padding-right: 30px;
     }
 
     input {
@@ -105,38 +176,60 @@ label {
       appearance: none;
       border: 1px solid $border;
       background-color: $white;
-      width: 16px;
-      height: 16px;
+      width: 22px;
+      height: 22px;
       display: inline-block;
       position: relative;
       vertical-align: middle;
       cursor: pointer;
-      margin-right: 5px;
-      margin-left: -23px;
+      margin-right: 19px;
+      margin-left: -37px;
       top: 0;
     }
 
     & input:checked + .wpcf7-list-item-label::after {
       content: "";
-      display: block;
       position: absolute;
-      top: 2px;
-      left: -20px;
-      width: 10px;
-      height: 10px;
-      border: solid $white;
-      background-color: $white;
-      border-radius: 2px;
+      width: 6px;
+      height: 14px;
+      border: solid $primarycolor;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      left: -28px;
+      top: 3px;
     }
 
     & input:checked + .wpcf7-list-item-label::before {
-      background-color: $red;
-      border: 1px solid $white;
+      border: 1px solid $border;
     }
   }
 
   a {
     color: $blue;
     text-decoration: underline;
+  }
+}
+
+.wpcf7-not-valid-tip {
+  margin-left: 0.18rem;
+  margin-top: 0.625rem;
+
+  @include fontSize(14);
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.wpcf7-response-output {
+  border: 1px solid $border !important;
+  color: $red !important;
+  text-transform: uppercase;
+
+  @include fontSize(14);
+
+  @include media-breakpoint-down(sm) {
+    margin: 0 0.5em 1em !important;
   }
 }

@@ -53,6 +53,21 @@ h2 {
   }
 }
 
+.h2 {
+  @include fontSize(32);
+  @include lineHeight(36);
+
+  @include media-breakpoint-down(lg) {
+    @include fontSize(28);
+    @include lineHeight(32);
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include fontSize(20);
+    @include lineHeight(22);
+  }
+}
+
 h3 {
   @include fontSize(20);
   @include lineHeight(22);

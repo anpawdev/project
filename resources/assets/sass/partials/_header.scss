@@ -1,11 +1,15 @@
 .header {
   background-color: $white;
   display: none;
+  padding: 20px 0;
+  border-bottom: 1px solid $border;
 
-  &--sticky {
-    display: block;
-    position: fixed;
-    width: 100%;
-    z-index: 9;
+  @include media-breakpoint-up(lg) {
+    &--sticky {
+      display: block;
+      position: fixed;
+      width: 100%;
+      z-index: 9;
+    }
   }
 }

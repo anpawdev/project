@@ -1,0 +1,111 @@
+.section--block-steps {
+  padding: 100px 0 86px;
+  background: url("../images/icons/block-bg.svg") $primarycolor right 19% top 9% no-repeat;
+
+  @include media-breakpoint-down(lg) {
+    padding: 69px 15px 86px;
+    background: url("../images/icons/block-bg.svg") #00af52 right -20% top 3% no-repeat;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 43px 15px 40px;
+    background: url("../images/icons/m-block-bg.svg") #00af52 right -121% top 2% no-repeat;
+  }
+
+  .block-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 87px;
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: repeat(1, 1fr);
+      margin-top: 50px;
+      gap: 23px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 17px;
+      gap: 16px;
+    }
+
+    &__item {
+      transition: 0.3s;
+
+      &:hover {
+        background-color: $green;
+        color: $white;
+      }
+
+      &-content {
+        padding: 28px 20px 39px 25px;
+
+        @include media-breakpoint-down(lg) {
+          padding: 34px 38px 91px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          padding: 6px 14px;
+        }
+
+        p {
+          @include media-breakpoint-down(lg) {
+            @include fontSize(16);
+            @include lineHeight(24);
+          }
+        }
+      }
+
+      &-badge {
+        border-top-right-radius: 14px;
+        border-bottom-right-radius: 14px;
+        width: 69px;
+        height: 53px;
+        color: rgba($white, 0.5);
+        top: 29px;
+
+        @include fontSize(14);
+
+        &::before {
+          content: "";
+          width: 0;
+          height: 0;
+          border-top: 7px solid $green;
+          border-left: 7px solid transparent;
+          margin: 25px auto 0;
+          position: absolute;
+          left: -7px;
+          bottom: -6px;
+        }
+
+        span {
+          font-weight: 700;
+
+          @include fontSize(20);
+        }
+      }
+
+      img {
+        @include media-breakpoint-down(lg) {
+          padding: 8px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  p {
+    @include media-breakpoint-down(lg) {
+      @include fontSize(20);
+      @include lineHeight(28);
+    }
+
+    @include media-breakpoint-down(sm) {
+      @include fontSize(16);
+      @include lineHeight(24);
+    }
+  }
+}

@@ -31,7 +31,7 @@
     </div>
   </div>
 </section>
-<section class="section--contact-form contact-form mt-8rem">
+<section class="section--contact-form contact-form mt-md-8rem mt-6" id="form">
   <div class="container">
     <div class="row">
       <div class="col-12 contact-form__wrapper border-radius-20">
